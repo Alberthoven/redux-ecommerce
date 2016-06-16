@@ -11,7 +11,7 @@ const getCartTotal = createSelector(getCartProducts, function (products) {
         (acc, product) => {
             acc + (product.qty * product.price)
         }, 0
-    ).toFixed(2);
+    ).toFixed(2); // number -> string con 2 decimales
 });
 export const getCartData = createSelector(getCartProducts, getCartTotal, function (products, total) {
     return {
